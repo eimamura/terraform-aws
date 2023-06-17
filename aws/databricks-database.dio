@@ -1,0 +1,24 @@
+<mxfile host="65bd71144e">
+    <diagram id="X8pm6YlTL4I-NLfsob9f" name="Page-1">
+        <mxGraphModel dx="1372" dy="778" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" style="locked=1;" parent="0"/>
+                <mxCell id="4" value="vpc" style="locked=1;" parent="0"/>
+                <mxCell id="5" value="VPC" style="sketch=0;outlineConnect=0;gradientColor=none;html=1;whiteSpace=wrap;fontSize=12;fontStyle=0;shape=mxgraph.aws4.group;grIcon=mxgraph.aws4.group_vpc;strokeColor=#B6BABF;fillColor=none;verticalAlign=top;align=left;spacingLeft=30;fontColor=#B6BABF;dashed=0;" vertex="1" parent="4">
+                    <mxGeometry x="150" y="200" width="470" height="350" as="geometry"/>
+                </mxCell>
+                <mxCell id="6" value="aws" parent="0"/>
+                <mxCell id="9" style="edgeStyle=none;html=1;" edge="1" parent="6" source="7" target="8">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="7" value="" style="sketch=0;aspect=fixed;html=1;points=[];align=center;image;fontSize=12;image=img/lib/mscae/Databricks.svg;" vertex="1" parent="6">
+                    <mxGeometry x="240" y="341" width="50" height="48" as="geometry"/>
+                </mxCell>
+                <mxCell id="8" value="Amazon&#10;Aurora" style="sketch=0;outlineConnect=0;fontColor=#232F3E;gradientColor=none;strokeColor=#ffffff;fillColor=#232F3E;dashed=0;verticalLabelPosition=middle;verticalAlign=bottom;align=center;html=1;whiteSpace=wrap;fontSize=10;fontStyle=1;spacing=3;shape=mxgraph.aws4.productIcon;prIcon=mxgraph.aws4.aurora;" vertex="1" parent="6">
+                    <mxGeometry x="380" y="310" width="80" height="110" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>
