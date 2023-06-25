@@ -1,5 +1,7 @@
 tmp.*
 *.pem
+.infracost/*
+terraform/.infracost
 
 # Local .terraform directories
 **/.terraform/*
