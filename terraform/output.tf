@@ -10,6 +10,6 @@ output "my-vm-private-ip" {
 # output "my-s3-bucket" {
 #   value = aws_s3_bucket.example.bucket_domain_name
 # }
-output "my-aurora-cluster" {
-  value = aws_rds_cluster.example.endpoint
-}
+# output "my-aurora-cluster" {
+#   value = aws_rds_cluster.example.endpoint
+# }
