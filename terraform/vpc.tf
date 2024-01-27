@@ -88,6 +88,12 @@ resource "aws_security_group" "handson_ec2_sg" {
     cidr_blocks = [local.allowed_cidr]
   }
   ingress {
+    from_port   = 3389
+    to_port     = 3389
+    protocol    = "tcp"
+    cidr_blocks = [local.allowed_cidr]
+  }
+  ingress {
     from_port   = 8
     to_port     = 0
     protocol    = "icmp"
@@ -121,6 +127,12 @@ resource "aws_security_group" "private_sg" {
     security_groups = [aws_security_group.handson_ec2_sg.id]
   }
   ingress {
+    from_port   = 3389
+    to_port     = 3389
+    protocol    = "tcp"
+    cidr_blocks = [local.allowed_cidr]
+  }
+  ingress {
     from_port       = 8
     to_port         = 0
     protocol        = "icmp"
@@ -138,4 +150,5 @@ resource "aws_security_group" "private_sg" {
     protocol    = "-1"
     cidr_blocks = ["0.0.0.0/0"]
   }
+
 }

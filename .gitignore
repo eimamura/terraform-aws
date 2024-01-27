@@ -2,6 +2,7 @@ tmp.*
 *.pem
 .infracost/*
 terraform/.infracost
+terraform/.terraform.lock.hcl
 
 # Local .terraform directories
 **/.terraform/*
