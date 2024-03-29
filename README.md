@@ -34,3 +34,12 @@ sudo systemctl start nginx.service
 sudo systemctl enable nginx
 systemctl status nginx
 ```
+
+```bash
+find terraform/.terraform*
+find terraform/.terraform* -exec rm -rf {} +
+
+find terraform/terraform.tfstate*
+find terraform/terraform.tfstate* -exec rm -rf {} +
+```
+
