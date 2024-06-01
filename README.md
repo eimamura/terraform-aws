@@ -1,4 +1,4 @@
-# my-software-architecture-diagrams
+# terraform-aws
 
 This repository contains a collection of software architecture diagrams that I have created while working on various projects.
 
