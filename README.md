@@ -43,3 +43,10 @@ find terraform/terraform.tfstate*
 find terraform/terraform.tfstate* -exec rm -rf {} +
 ```
 
+```bash
+# install aws cli and create symlink in wsl2 to use host machine .aws
+sudo apt update
+sudo apt install awscli -y
+ln -s /mnt/c/Users/YourUsername/.aws ~/.aws
+aws sts get-caller-identity
+```
