@@ -2,6 +2,24 @@
 
 This repository contains a collection of software architecture diagrams that I have created while working on various projects.
 
+steps:
+- Create IAM User
+- Create credencials for codecommit IAM User
+
+- Create codecommit
+- Git clone from codecommit
+- Setup git credencial manager
+- Git push
+
+- Create ECR
+- Create CodeBuild, add ECR full access policy to CodeBuildRole
+- Run CodeBuild
+
+- Create CodePipeline
+
+- issue codecommit kms
+- issue CodePipeline cannot access s3 artefact
+
 # Commands
 
 ```bash
