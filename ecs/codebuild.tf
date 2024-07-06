@@ -7,7 +7,8 @@ resource "aws_codebuild_project" "codebuild_project" {
   service_role = aws_iam_role.codebuild_role.arn
 
   artifacts {
-    type = "NO_ARTIFACTS"
+    # type = "NO_ARTIFACTS"
+    type = "CODEPIPELINE"
   }
 
   cache {
@@ -27,24 +28,26 @@ resource "aws_codebuild_project" "codebuild_project" {
     }
   }
 
-  # source {
-  #   type            = "CODECOMMIT"
-  #   location        = "https://git-codecommit.us-east-1.amazonaws.com/v1/repos/fastapi-deploy"
-  #   git_clone_depth = 1
-  # }
   source {
-    type            = "GITHUB"
-    location        = "https://github.com/eimamura/fastapi-deploy.git"
+    # type            = "CODECOMMIT"
+    type            = "CODEPIPELINE"
+    location        = "https://git-codecommit.us-east-1.amazonaws.com/v1/repos/fastapi-deploy"
     git_clone_depth = 1
-    buildspec       = "buildspec.yml"
-    # https://docs.aws.amazon.com/codebuild/latest/userguide/access-tokens.html#access-tokens-github
-    # Foi feito oauth para o github manulamente pelo console do codebuild
-    # Precisa criar pelo menos uma imagem para publicar em Deployment type: Rolling update (ECS)
-    # auth {
-    #   type     = "OAUTH"
-    #   resource = "eimamura/fastapi-deploy"
-    # }
   }
+
+  # source {
+  #   type            = "GITHUB"
+  #   location        = "https://github.com/eimamura/fastapi-deploy.git"
+  #   git_clone_depth = 1
+  #   buildspec       = "buildspec.yml"
+  #   # https://docs.aws.amazon.com/codebuild/latest/userguide/access-tokens.html#access-tokens-github
+  #   # Foi feito oauth para o github manulamente pelo console do codebuild
+  #   # Precisa criar pelo menos uma imagem para publicar em Deployment type: Rolling update (ECS)
+  #   # auth {
+  #   #   type     = "OAUTH"
+  #   #   resource = "eimamura/fastapi-deploy"
+  #   # }
+  # }
 
   tags = {
     Environment = "Test"
