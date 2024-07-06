@@ -39,6 +39,7 @@ resource "aws_codebuild_project" "codebuild_project" {
     buildspec       = "buildspec.yml"
     # https://docs.aws.amazon.com/codebuild/latest/userguide/access-tokens.html#access-tokens-github
     # Foi feito oauth para o github manulamente pelo console do codebuild
+    # Precisa criar pelo menos uma imagem para publicar em Deployment type: Rolling update (ECS)
     # auth {
     #   type     = "OAUTH"
     #   resource = "eimamura/fastapi-deploy"

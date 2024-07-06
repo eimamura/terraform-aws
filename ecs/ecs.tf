@@ -12,5 +12,7 @@ resource "aws_ecs_cluster" "ecs_cluster" {
       }
     }
   }
+
 }
 
+# https://docs.aws.amazon.com/AmazonECS/latest/developerguide/stopped-task-errors.html
