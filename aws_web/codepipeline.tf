@@ -69,7 +69,8 @@ data "aws_iam_policy_document" "codepipeline_policy" {
 # }
 
 resource "aws_s3_bucket" "codepipeline_bucket" {
-  bucket = "test-bucket-codepipeline-sdfjkhnsj"
+  bucket        = "test-bucket-codepipeline-sdfjkhnsj"
+  force_destroy = true
 }
 
 resource "aws_s3_bucket_public_access_block" "codepipeline_bucket_pab" {

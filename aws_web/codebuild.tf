@@ -7,7 +7,8 @@
 
 
 resource "aws_s3_bucket" "example" {
-  bucket = "example-bucket-123456789012dvgdg"
+  bucket        = "example-bucket-123456789012dvgdg"
+  force_destroy = true
 }
 
 # resource "aws_s3_bucket_acl" "example" {
