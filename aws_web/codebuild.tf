@@ -1,3 +1,11 @@
+
+# data aws_iam_policy_document assume_role
+# aws_iam_role
+
+# data aws_iam_policy_document example
+# aws_iam_role_policy
+
+
 resource "aws_s3_bucket" "example" {
   bucket = "example-bucket-123456789012dvgdg"
 }
@@ -83,6 +91,8 @@ data "aws_iam_policy_document" "example" {
     resources = [
       aws_s3_bucket.example.arn,
       "${aws_s3_bucket.example.arn}/*",
+      aws_s3_bucket.codepipeline_bucket.arn,
+      "${aws_s3_bucket.codepipeline_bucket.arn}/*",
     ]
   }
 
