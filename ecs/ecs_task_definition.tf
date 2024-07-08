@@ -2,7 +2,7 @@ resource "aws_ecs_task_definition" "backend_task_definition" {
   family = "backend-task"
   container_definitions = jsonencode([
     {
-      name      = "backend"
+      name      = "fastapi-deploy"
       image     = aws_ecr_repository.my_repository.repository_url
       essential = true
       portMappings = [

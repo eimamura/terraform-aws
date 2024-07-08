@@ -16,7 +16,8 @@ resource "aws_iam_role" "codepipeline_role" {
   managed_policy_arns = [
     "arn:aws:iam::aws:policy/AWSCodeBuildDeveloperAccess",
     "arn:aws:iam::aws:policy/AWSCodeCommitPowerUser",
-    "arn:aws:iam::aws:policy/AmazonS3FullAccess"
+    "arn:aws:iam::aws:policy/AmazonS3FullAccess",
+    "arn:aws:iam::aws:policy/AmazonECS_FullAccess",
   ]
 }
 
