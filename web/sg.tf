@@ -32,7 +32,7 @@ resource "aws_security_group" "sg_rds" {
     from_port   = 5432
     to_port     = 5432
     protocol    = "tcp"
-    cidr_blocks = ["0.0.0.0/0"]
+    cidr_blocks = [module.vpc.subnet_public_cidr_block]
   }
 
   egress {
