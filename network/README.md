@@ -1,4 +1,6 @@
 # network experiments
+- ping
+- curl
 
 ## components
 - vpc
@@ -9,6 +11,12 @@
 - igw
 - natgw
 - lb
+
+## traffic filtering
+- inbound traffic
+- outbound traffic
+
+## how to check if blocked by filtering or routing
 
 ## networking connection
 - vpc to vpc
